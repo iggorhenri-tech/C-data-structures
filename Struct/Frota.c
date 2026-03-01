@@ -38,7 +38,7 @@ void imprimir(carro c) {
     printf("\n [%03d] %-12s | %-12s | %d", c.id, c.marca, c.modelo, c.ano);
     printf("\n       Tanque: %4.1fL  | Consumo: %4.1f km/l | Autonomia: %.1f km", 
            c.tanque, c.consumo, c.tanque * c.consumo);
-    printf("\n -------------------------------------------------------------------");
+    printf("\n ------------------------------------------------------------------");
 }
 
 int main(void) {
@@ -51,6 +51,11 @@ int main(void) {
     printf(" Quantos carros serao cadastrados? ");
     scanf("%d", &n);
 
+ if (n <= 0) {
+    printf("\nQuantidade inválida!\nDigite um valor maior que 0,\n");
+    return 1; 
+}
+
     carro veiculo[n];
 
     for (int i = 0; i < n; i++) {
@@ -58,9 +63,9 @@ int main(void) {
         veiculo[i] = cadastrar();
     }
     
-    printf("\n\n====================================================================");
+    printf("\n\n===================================================================");
     printf("\n                  LISTA DE CARROS E AUTONOMIA");
-    printf("\n====================================================================");
+    printf("\n===================================================================");
     
     for (int i = 0; i < n; i++) {
         imprimir(veiculo[i]);
