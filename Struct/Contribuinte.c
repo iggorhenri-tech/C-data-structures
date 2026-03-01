@@ -17,7 +17,7 @@ int main() {
     scanf("%d", &n);
     
     if (n <= 0) {
-    printf("\nQuantidade inválida!\nDigite um valor maior que 0,\n");
+    printf("\nQuantidade inválida!\nDigite um valor maior que 0\n");
     return 1; 
 }
 
