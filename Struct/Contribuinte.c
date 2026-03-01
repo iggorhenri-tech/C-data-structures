@@ -16,8 +16,8 @@ int main() {
     printf("Digite a quantidade de contribuintes: ");
     scanf("%d", &n);
     
-    if (n != 1) {
-    printf("Erro: Apenas o numero 1 é aceito.\n");
+    if (n <= 0) {
+    printf("\nQuantidade inválida!\nDigite um valor maior que 0,\n");
     return 1; 
 }
 
