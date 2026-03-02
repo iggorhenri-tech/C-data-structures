@@ -35,7 +35,7 @@ int main() {
     pilha.topo = -1;
     
     for(int i = 0; i < TAM; i++){
-        printf("digite o valor: ");
+        printf("Digite o valor: ");
         scanf("%d", &valor);
         empilhar(valor, &pilha);
     }
